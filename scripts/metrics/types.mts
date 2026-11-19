@@ -31,7 +31,6 @@ export interface ProfileData {
   pullRequests: number;
   issues: number;
   contributedTo: number;
-  calendarWeeks: CalendarWeeks;
   repos: readonly OwnedRepo[];
 }
 

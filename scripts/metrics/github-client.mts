@@ -9,16 +9,23 @@ const MAX_REPO_PAGES = 10;
 // Same counters as the github-readme-stats card: commits and contributed-to cover the last year.
 const PROFILE_QUERY = `query Profile($login: String!) {
   user(login: $login) {
-    contributionsCollection {
-      totalCommitContributions
-      contributionCalendar {
-        weeks { contributionDays { date weekday contributionCount contributionLevel } }
-      }
-    }
+    contributionsCollection { totalCommitContributions }
     repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) { totalCount }
     pullRequests(first: 1) { totalCount }
     openIssues: issues(states: OPEN) { totalCount }
     closedIssues: issues(states: CLOSED) { totalCount }
+  }
+}`;
+
+// Asked with the workflow's own token, the calendar counts private contributions the same way the
+// public profile does once "Include private contributions on my profile" is enabled.
+const CALENDAR_QUERY = `query Calendar($login: String!) {
+  user(login: $login) {
+    contributionsCollection {
+      contributionCalendar {
+        weeks { contributionDays { date weekday contributionCount contributionLevel } }
+      }
+    }
   }
 }`;
 
@@ -50,14 +57,19 @@ interface Count {
 
 interface ProfileQueryData {
   user: {
-    contributionsCollection: {
-      totalCommitContributions: number;
-      contributionCalendar: { weeks: readonly { contributionDays: readonly ContributionDay[] }[] };
-    };
+    contributionsCollection: { totalCommitContributions: number };
     repositoriesContributedTo: Count;
     pullRequests: Count;
     openIssues: Count;
     closedIssues: Count;
+  } | null;
+}
+
+interface CalendarQueryData {
+  user: {
+    contributionsCollection: {
+      contributionCalendar: { weeks: readonly { contributionDays: readonly ContributionDay[] }[] };
+    };
   } | null;
 }
 
@@ -131,16 +143,17 @@ export async function fetchProfile(request: GraphQLRequest, login: string): Prom
   ]);
   const user = profile.user;
   if (!user) throw new Error(`GitHub user ${login} not found`);
-  const contributions = user.contributionsCollection;
-  const calendarWeeks: CalendarWeeks = contributions.contributionCalendar.weeks.map(
-    (week) => week.contributionDays,
-  );
   return {
-    commitsLastYear: contributions.totalCommitContributions,
+    commitsLastYear: user.contributionsCollection.totalCommitContributions,
     pullRequests: user.pullRequests.totalCount,
     issues: user.openIssues.totalCount + user.closedIssues.totalCount,
     contributedTo: user.repositoriesContributedTo.totalCount,
-    calendarWeeks,
     repos,
   };
+}
+
+export async function fetchContributionCalendar(request: GraphQLRequest, login: string): Promise<CalendarWeeks> {
+  const data = await request<CalendarQueryData>(CALENDAR_QUERY, { login });
+  if (!data.user) throw new Error(`GitHub user ${login} not found`);
+  return data.user.contributionsCollection.contributionCalendar.weeks.map((week) => week.contributionDays);
 }

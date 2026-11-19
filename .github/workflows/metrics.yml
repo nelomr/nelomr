@@ -28,7 +28,8 @@ jobs:
           node-version: '26'
 
       # METRICS_TOKEN is an optional read-only fine-grained token that adds private repositories.
-      # Without it the script falls back to the workflow's GITHUB_TOKEN and public data.
+      # GITHUB_TOKEN reads the contribution calendar as the public profile shows it, and stands in
+      # for METRICS_TOKEN when that secret is unset.
       # The secrets reach this step only, which runs this repository's own code.
       - name: Generate metrics SVGs
         env:
