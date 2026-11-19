@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg" />
-  <img alt="Nelo M. — Product Engineer: SaaS, Web3 &amp; Spec-Driven Development" src="./assets/banner-light.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nelomr/nelomr/main/assets/banner-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nelomr/nelomr/main/assets/banner-light.svg" />
+  <img alt="Nelo M. — Product Engineer: SaaS, Web3 &amp; Spec-Driven Development" src="https://raw.githubusercontent.com/nelomr/nelomr/main/assets/banner-light.svg" width="100%" />
 </picture>
 
 <p align="center">
@@ -119,7 +119,7 @@ Local-first plugin marketplace for Claude Code (`kolen-plugins`). Its `kolen-sdd
 ## GitHub stats and languages
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/metrics-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/metrics-light.svg" />
-  <img alt="GitHub stats, most used languages and an isometric calendar of the last 26 weeks of contributions" src="./assets/metrics-light.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nelomr/nelomr/main/assets/metrics-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nelomr/nelomr/main/assets/metrics-light.svg" />
+  <img alt="GitHub stats, most used languages and an isometric calendar of the last 26 weeks of contributions" src="https://raw.githubusercontent.com/nelomr/nelomr/main/assets/metrics-light.svg" width="100%" />
 </picture>
