@@ -6,8 +6,8 @@
 
 <p align="center">
   <a href="https://criptonlabs.com"><kbd>&nbsp;Criptonlabs&nbsp;</kbd></a>&nbsp;
-  <a href="https://nelomr.github.io/components-kit/"><kbd>&nbsp;Storybook hub&nbsp;</kbd></a>&nbsp;
-  <a href="https://github.com/criptonlabs"><kbd>&nbsp;@criptonlabs on GitHub&nbsp;</kbd></a>
+  <a href="https://criptofolio.criptonlabs.com/"><kbd>&nbsp;Criptofolio&nbsp;</kbd></a>&nbsp;
+  <a href="https://nelomr.github.io/components-kit/"><kbd>&nbsp;Storybook hub&nbsp;</kbd></a>
 </p>
 
 Product Engineer with ~10 years of experience architecting production SaaS interfaces, dual-framework design systems, high-throughput visualization engines, and local-first software.
