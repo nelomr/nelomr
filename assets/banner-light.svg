@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="1200" height="200" role="img" aria-label="Nelo M. — Product Engineer">
+  <defs>
+    <clipPath id="clip-light">
+      <rect x="0.5" y="0.5" width="1199" height="199" rx="8" />
+    </clipPath>
+    <linearGradient id="bg-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#edf4fc" />
+      <stop offset="60%" stop-color="#f2f7fa" />
+      <stop offset="100%" stop-color="#edfbf5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background containing colors with zero circular overlays -->
+  <g clip-path="url(#clip-light)">
+    <rect width="1200" height="200" fill="url(#bg-light)" />
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="199" rx="8" fill="none" stroke="#cad8e6" stroke-width="1" />
+
+  <!-- Left typography block (No status dot/circle next to the username) -->
+  <text x="48" y="46" fill="#58677a" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" letter-spacing="0.8">
+    @nelomr
+  </text>
+
+  <text x="48" y="94" fill="#0f172a" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Helvetica, Arial, sans-serif" font-size="42" font-weight="600" letter-spacing="-1.2">
+    Nelo M.
+  </text>
+
+  <text x="48" y="124" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Helvetica, Arial, sans-serif" font-size="15.5" font-weight="400">
+    Product Engineer — SaaS, Web3 & Spec-Driven Development
+  </text>
+
+  <!-- Right modular dashboard/graph visual (Totally stripped of circles/dots) -->
+  <g>
+    <!-- Top-left component card (Emerald label as a small rectangle instead of a dot) -->
+    <rect x="856" y="36" width="136" height="42" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#cbd5e1" stroke-width="1" />
+    <rect x="867" y="47" width="22" height="7" rx="1" fill="#2ea06c" fill-opacity="0.14" stroke="#2ea06c" stroke-width="1" />
+    <rect x="896" y="48.5" width="46" height="4" rx="1" fill="#1e293b" opacity="0.85" />
+    
+    <!-- Flat indicators (using square capsules instead of circles) -->
+    <rect x="956" y="48" width="8" height="4" rx="0.5" fill="#0969da" opacity="0.75" />
+    <rect x="968" y="48" width="8" height="4" rx="0.5" fill="#d97706" opacity="0.75" />
+    <rect x="867" y="63" width="98" height="3" rx="1" fill="#94a3b8" />
+
+    <!-- Bottom-left data trace module (Zero dots, straight data trajectory) -->
+    <rect x="856" y="84" width="84" height="42" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#cbd5e1" stroke-width="1" />
+    <path d="M 866 116 L 878 116 L 888 100 L 900 109 L 912 95 L 928 103 L 928 118 L 866 118 Z" fill="#0969da" fill-opacity="0.1" />
+    <path d="M 866 116 L 878 116 L 888 100 L 900 109 L 912 95 L 928 103" fill="none" stroke="#0969da" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Trace cross indicator using pure intersect strokes rather than dots -->
+    <path d="M 912 91 V 98 M 908 95 H 915" stroke="#d97706" stroke-width="1" />
+
+    <!-- Bottom-middle modular grid (No circular node structures) -->
+    <rect x="946" y="84" width="46" height="42" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#cbd5e1" stroke-width="1" />
+    <path d="M 969 95 M 958 113 L 969 95 L 980 113 Z" fill="none" stroke="#2ea06c" stroke-opacity="0.25" stroke-width="1" />
+    <!-- Node connections replaced with miniature squares -->
+    <rect x="967.5" y="93.5" width="3" height="3" fill="#d97706" />
+    <rect x="956.5" y="111.5" width="3" height="3" fill="#0969da" />
+    <rect x="978.5" y="111.5" width="3" height="3" fill="#2ea06c" />
+
+    <!-- Right spec/SaaS panel (SDD) (No circle badges) -->
+    <rect x="998" y="36" width="154" height="90" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#cbd5e1" stroke-width="1" />
+    <line x1="998" y1="56" x2="1152" y2="56" stroke="#cbd5e1" stroke-width="1" />
+    <rect x="1010" y="44.5" width="38" height="3" rx="1" fill="#64748b" />
+    <rect x="1116" y="43" width="24" height="6.5" rx="1" fill="#2ea06c" fill-opacity="0.16" stroke="#2ea06c" stroke-width="0.9" />
+
+    <!-- Line data (using miniature horizontal dashes instead of dot lists) -->
+    <rect x="1010" y="69.5" width="8" height="2" rx="0.5" fill="#2ea06c" />
+    <rect x="1024" y="69" width="84" height="3" rx="1" fill="#475569" opacity="0.85" />
+
+    <rect x="1010" y="87.5" width="8" height="2" rx="0.5" fill="#2ea06c" />
+    <rect x="1024" y="87" width="102" height="3" rx="1" fill="#475569" opacity="0.85" />
+
+    <rect x="1010" y="105.5" width="8" height="2" rx="0.5" fill="#d97706" fill-opacity="0.3" stroke="#d97706" stroke-width="0.8" />
+    <rect x="1024" y="105" width="66" height="3" rx="1" fill="#94a3b8" />
+  </g>
+
+  <!-- Footer spec bar -->
+  <line x1="48" y1="150" x2="1152" y2="150" stroke="#cbd5e1" stroke-width="1" />
+
+  <text x="48" y="176" fill="#475569" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" letter-spacing="0.6">
+    <tspan fill="#15803d">VUE 3</tspan> · <tspan fill="#b45309">JAVASCRIPT</tspan> · <tspan fill="#0369a1">CSS</tspan> · SAAS
+  </text>
+
+  <text x="1152" y="176" text-anchor="end" fill="#475569" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" letter-spacing="0.6">
+    WEB3 · PRODUCT ENGINEERING · <tspan fill="#15803d">SDD</tspan>
+  </text>
+</svg>

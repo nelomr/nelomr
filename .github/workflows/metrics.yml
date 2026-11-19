@@ -1,0 +1,49 @@
+name: Generate Static Metrics
+
+on:
+  schedule:
+    - cron: '0 5 * * 1,4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Shared with update-readme.yml so the two workflows never push to main at the same time.
+concurrency:
+  group: profile-commits
+  cancel-in-progress: false
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Only GitHub's own actions run here, pinned to release commits (Dependabot bumps them).
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '26'
+
+      # METRICS_TOKEN is an optional read-only fine-grained token that adds private repositories.
+      # Without it the script falls back to the workflow's GITHUB_TOKEN and public data.
+      # The secrets reach this step only, which runs this repository's own code.
+      - name: Generate metrics SVGs
+        env:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-metrics.mts
+
+      - name: Commit changes if updated
+        run: |
+          if [ -z "$(git status --porcelain -- assets/metrics-light.svg assets/metrics-dark.svg)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/metrics-light.svg assets/metrics-dark.svg
+          git commit -m "chore(profile): refresh static metrics"
+          git push
