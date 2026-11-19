@@ -103,7 +103,7 @@ function renderStats(stats: ProfileStats, theme: Theme): string {
   });
   return [
     panel(0, 0, HALF_WIDTH, TOP_HEIGHT, theme),
-    `<text class="title" x="${PADDING}" y="35">GitHub Stats</text>`,
+    `<text class="title" x="${PADDING}" y="35">GitHub stats</text>`,
     ...rows,
   ].join('');
 }
@@ -144,7 +144,7 @@ function renderLanguages(languages: readonly LanguageShare[], theme: Theme): str
         ];
   return [
     panel(panelX, 0, HALF_WIDTH, TOP_HEIGHT, theme),
-    `<text class="title" x="${x}" y="35">Most Used Languages</text>`,
+    `<text class="title" x="${x}" y="35">Most used languages</text>`,
     ...body,
   ].join('');
 }
@@ -219,7 +219,7 @@ function renderLegend(theme: Theme): string {
 function renderCalendar(calendar: CalendarSummary, theme: Theme): string {
   return [
     panel(0, CALENDAR_Y, WIDTH, CALENDAR_HEIGHT, theme),
-    `<text class="title" x="${PADDING}" y="${CALENDAR_Y + 35}">Contributions · last ${calendar.weeks.length} weeks</text>`,
+    `<text class="title" x="${PADDING}" y="${CALENDAR_Y + 35}">Contributions in the last ${calendar.weeks.length} weeks</text>`,
     renderIsometric(calendar, theme),
     renderCalendarFigures(calendar),
     renderLegend(theme),

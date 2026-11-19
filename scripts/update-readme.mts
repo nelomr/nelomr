@@ -90,7 +90,7 @@ async function getRepoPulse(fullName: string): Promise<RepoPulse> {
     ? escapeMarkdown(truncate(firstLine(latestCommit.commit.message), MAX_MESSAGE_LENGTH))
     : 'Repository updated';
   const releaseBadge = latestRelease
-    ? `[\`${latestRelease.tag_name}\`](${latestRelease.html_url}) · `
+    ? `[\`${latestRelease.tag_name}\`](${latestRelease.html_url}) `
     : '';
 
   return {
@@ -106,7 +106,7 @@ function renderTable(pulses: readonly RepoPulse[]): string {
   const rows = [...pulses]
     .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
     .map((item) => `| [\`${item.fullName}\`](${item.url}) | \`${item.dateLabel}\` | ${item.summary} |`);
-  return ['| Repository | Latest Update | Latest Commit / Release |', '| :--- | :--- | :--- |', ...rows].join('\n');
+  return ['| Repository | Updated | Latest commit or release |', '| :--- | :--- | :--- |', ...rows].join('\n');
 }
 
 function renderBlock(table: string, changedOn: string): string {
@@ -114,7 +114,7 @@ function renderBlock(table: string, changedOn: string): string {
     '<!-- ACTIVITY:START -->',
     table,
     '',
-    `*Auto-synced daily via GitHub Actions · Last change: \`${changedOn}\` UTC.*`,
+    `<sub>Updated daily by GitHub Actions. Last change: ${changedOn} (UTC).</sub>`,
     '<!-- ACTIVITY:END -->',
   ].join('\n');
 }
