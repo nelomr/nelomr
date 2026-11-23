@@ -86,13 +86,13 @@ Local-first plugin marketplace for Claude Code (`kolen-plugins`). Its `kolen-sdd
 <!-- ACTIVITY:START -->
 | Repository | Updated | Latest commit or release |
 | :--- | :--- | :--- |
+| [`nelomr/trace-kit`](https://github.com/nelomr/trace-kit) | `2026-11-23` | [`v0.0.12`](https://github.com/nelomr/trace-kit/releases/tag/v0.0.12) [chore(release): version packages \[skip ci\]](https://github.com/nelomr/trace-kit/commit/34c850fa5054cd7bd256eff99fc33015c37b11ba) |
 | [`criptonlabs/agent-apis-sdk`](https://github.com/criptonlabs/agent-apis-sdk) | `2026-11-16` | [`@criptonlabs/agent-apis-xrpl@0.0.1`](https://github.com/criptonlabs/agent-apis-sdk/releases/tag/%40criptonlabs/agent-apis-xrpl%400.0.1) [chore: version packages (#1)](https://github.com/criptonlabs/agent-apis-sdk/commit/0d50c1fc1bba15e0313108d9e9e0db60613528dd) |
-| [`nelomr/trace-kit`](https://github.com/nelomr/trace-kit) | `2026-11-06` | [`v0.0.11`](https://github.com/nelomr/trace-kit/releases/tag/v0.0.11) [chore(release): version packages \[skip ci\]](https://github.com/nelomr/trace-kit/commit/7d204110f038341586d899926e8e2f462eb2e132) |
 | [`nelomr/claude-mods`](https://github.com/nelomr/claude-mods) | `2026-10-25` | [chore: drop types field from plugin manifest](https://github.com/nelomr/claude-mods/commit/94b2a05025cd37019398a4883f4cc4d2df5aec25) |
 | [`nelomr/components-kit`](https://github.com/nelomr/components-kit) | `2026-10-24` | [feat(monorepo): introduce multi-framework architecture with vue 3 a…](https://github.com/nelomr/components-kit/commit/9f9a53795356617a11067ff3827f998ec8f4ab50) |
 | [`nelomr/criptofolio`](https://github.com/nelomr/criptofolio) | `2026-10-17` | [chore(release): set initial pre-stable version 0.1.0](https://github.com/nelomr/criptofolio/commit/2f652d8bbbee54af6bd57f664039fc0abed610fc) |
 
-<sub>Updated daily by GitHub Actions. Last change: 2026-11-19 (UTC).</sub>
+<sub>Updated daily by GitHub Actions. Last change: 2026-11-23 (UTC).</sub>
 <!-- ACTIVITY:END -->
 
 ## Engineering principles
