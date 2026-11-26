@@ -86,13 +86,13 @@ Local-first plugin marketplace for Claude Code (`kolen-plugins`). Its `kolen-sdd
 <!-- ACTIVITY:START -->
 | Repository | Updated | Latest commit or release |
 | :--- | :--- | :--- |
+| [`criptonlabs/agent-apis-sdk`](https://github.com/criptonlabs/agent-apis-sdk) | `2026-11-26` | [`@criptonlabs/agent-apis-xrpl@0.0.2`](https://github.com/criptonlabs/agent-apis-sdk/releases/tag/%40criptonlabs/agent-apis-xrpl%400.0.2) [feat(xrpl): pay one XRPL payment at a time per wallet](https://github.com/criptonlabs/agent-apis-sdk/commit/5b79c0140fdc0a23b471c6cdbeabb16aa84a20fb) |
 | [`nelomr/trace-kit`](https://github.com/nelomr/trace-kit) | `2026-11-25` | [`v0.0.13`](https://github.com/nelomr/trace-kit/releases/tag/v0.0.13) [chore(release): version packages \[skip ci\]](https://github.com/nelomr/trace-kit/commit/8dbb3541a3a876b525420d5d2f6300f312e3b10e) |
-| [`criptonlabs/agent-apis-sdk`](https://github.com/criptonlabs/agent-apis-sdk) | `2026-11-24` | [`@criptonlabs/agent-apis-xrpl@0.0.2`](https://github.com/criptonlabs/agent-apis-sdk/releases/tag/%40criptonlabs/agent-apis-xrpl%400.0.2) [chore: version packages (#2)](https://github.com/criptonlabs/agent-apis-sdk/commit/61e7c64aec0d575fc241a0c2e860ff43171182fd) |
 | [`nelomr/claude-mods`](https://github.com/nelomr/claude-mods) | `2026-10-25` | [chore: drop types field from plugin manifest](https://github.com/nelomr/claude-mods/commit/94b2a05025cd37019398a4883f4cc4d2df5aec25) |
 | [`nelomr/components-kit`](https://github.com/nelomr/components-kit) | `2026-10-24` | [feat(monorepo): introduce multi-framework architecture with vue 3 a…](https://github.com/nelomr/components-kit/commit/9f9a53795356617a11067ff3827f998ec8f4ab50) |
 | [`nelomr/criptofolio`](https://github.com/nelomr/criptofolio) | `2026-10-17` | [chore(release): set initial pre-stable version 0.1.0](https://github.com/nelomr/criptofolio/commit/2f652d8bbbee54af6bd57f664039fc0abed610fc) |
 
-<sub>Updated daily by GitHub Actions. Last change: 2026-11-25 (UTC).</sub>
+<sub>Updated daily by GitHub Actions. Last change: 2026-11-26 (UTC).</sub>
 <!-- ACTIVITY:END -->
 
 ## Engineering principles
